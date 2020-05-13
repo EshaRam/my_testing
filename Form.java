@@ -1,5 +1,5 @@
 package com.edu.basic;
-
+// Selenium Assignment for using actions class copy and paste
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
