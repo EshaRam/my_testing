@@ -1,3 +1,6 @@
+// Submit a Register page and assert for success message.
+
+
 package com.edu.basic;
 
 import com.google.common.primitives.Booleans;
