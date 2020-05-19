@@ -42,3 +42,29 @@ select first_name,last_name, hire_date from employees where first_name = 'Steven
 
 -- query to find employee details of first highest salaried person.
 select max(salary), first_name,last_name, job_id from employees group by first_name,last_name,job_id limit 1;
+
+******************************************************************************************
+
+-- Write a query to get the department name and number of employees in the department.
+select count(*) employee_id, d.department_name from departments d inner join employees e 
+on e.department_id=d.department_id group by department_name;
+
+-- Write a query to find the name (first_name, last_name), and salary of the employees whose salary is greater than the average salary.
+select first_name, last_name,salary from employees where salary >(select avg(salary) as avgsalary from employees);
+
+
+select manager_id, min(salary) as salary from employees where manager_id is not null group by manager_id order by salary;
+
+-- find fn,ln of employees who works in IT departments
+select e.first_name, e.last_name from employees e left join  departments d on e.department_id= d.department_id where department_name = 'IT';
+
+-- find fn,ln of all employees who are managers
+select distinct  m.first_name, m.last_name from employees e inner join employees m on m.employee_id = e.manager_id;
+
+-- find the fn,ln and hire date of employees who was hired after 'jones'
+select concat(first_name,' ',last_name)as fullname , hire_date from employees where hire_date > (select hire_date from employees where first_name = 'Mattea');
+
+
+-- get department_name and number of employees in each department
+select department_name, count(*) employee_id  from departments d left join employees e on e.department_id = d.department_id group by department_name;
+
