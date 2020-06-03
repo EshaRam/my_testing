@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class Factorial {
 	
@@ -11,13 +11,14 @@ public class Factorial {
 			for (int j=num;j>=1;j--) {
 				
 				sum = sum *j;
-				
+					
 			}
 			return sum;
+			
 		}
 	
 	public static int recursive(int num) {
-		//System.out.println("Calling recursive method is for value: "+num);
+		
 		if (num==1) 
 			return 1;
 		
@@ -29,21 +30,14 @@ public class Factorial {
 	}
 	public static void main(String[] args) {
 		
-		@SuppressWarnings("resource")
-		Scanner input = new Scanner(System.in);
-		
-		System.out.print("Enter the number to find factorial : ");
-		int num = input.nextInt();
 		
 	
-		int factorial = nonrecursive(num);
-		System.out.println("Factorial for "+num+" in non-recursive method is: "+factorial);	
+		int factorial = nonrecursive(5);
 		
-
+		System.out.println("Factorial in non-recursive method is: " + factorial);	
 		
-		
-		factorial = recursive(num);
-		System.out.println("Factorial for "+num+" in recursive method is: "+factorial);
+		factorial = recursive(6);
+		System.out.println("Factorial in recursive method is: "+factorial);
 	}
 
 	}
