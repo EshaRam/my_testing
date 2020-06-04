@@ -6,10 +6,9 @@ public class Fibonacci {
 	//any desired number.
 	
 	
-	public static void main(String[] args) {
+	public static  void fibonacci() {
 		int num1=0;
 		int num2=1;
-		
 		System.out.println(num1);
 		System.out.println(num2);
 		
@@ -22,5 +21,10 @@ public class Fibonacci {
 		}
 		
 	}
+	public static void main(String[] args) {
+		fibonacci();
+		
+	}
+	}
 
-}
+
